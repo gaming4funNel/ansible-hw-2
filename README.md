@@ -11,16 +11,14 @@
 
 1. Подготовьте свой inventory-файл `prod.yml`.
 
-[prod.yml](https://github.com/gaming4funNel/ansible-hw-2/blob/main/playbook/inventory/prod.yml)
+![Ansible](https://github.com/gaming4funNel/ansible-hw-2/blob/main/img/ansible.png)
 
 2. Допишите playbook: нужно сделать ещё один play, который устанавливает и настраивает [vector](https://vector.dev). Конфигурация vector должна деплоиться через template файл jinja2. От вас не требуется использовать все возможности шаблонизатора, просто вставьте стандартный конфиг в template файл. Информация по шаблонам по [ссылке](https://www.dmosk.ru/instruktions.php?object=ansible-nginx-install). не забудьте сделать handler на перезапуск vector в случае изменения конфигурации!
-
-[site.yml](https://github.com/gaming4funNel/ansible-hw-2/blob/main/playbook/inventory/site.yml)
-
 3. При создании tasks рекомендую использовать модули: `get_url`, `template`, `unarchive`, `file`.
 4. Tasks должны: скачать дистрибутив нужной версии, выполнить распаковку в выбранную директорию, установить vector.
 5. Запустите `ansible-lint site.yml` и исправьте ошибки, если они есть.
 
+![Ansible](https://github.com/gaming4funNel/ansible-hw-2/blob/main/img/ansible1.png)
 
 6. Попробуйте запустить playbook на этом окружении с флагом `--check`.
 7. Запустите playbook на `prod.yml` окружении с флагом `--diff`. Убедитесь, что изменения на системе произведены.

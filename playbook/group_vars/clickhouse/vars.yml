@@ -1,10 +1,9 @@
 ---
-clickhouse_version: "22.3.10.22"
-clickhouse_amd64_packages:
+clickhouse_version: "22.3.3.44"
+clickhouse_packages:
   - clickhouse-client
   - clickhouse-server
   - clickhouse-common-static
-
-vector_version: "0.30.0"
-vector_amd64_packages:
-  - vector
+vector_version: 0.31.0
+vector_config_dir: "{{ ansible_user_dir }}/vector_config"
+vector_config:
